@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <defs>
+        <linearGradient id="Gradient" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="#3d9398"/>
+            <stop offset="15%" stop-color="#2d8da5"/>
+            <stop offset="23.5%" stop-color="#3785ae"/>
+            <stop offset="32%" stop-color="#527bb0"/>
+            <stop offset="40.5%" stop-color="#706ea9"/>
+            <stop offset="49%" stop-color="#8066a1"/>
+            <stop offset="57.5%" stop-color="#8d5d96"/>
+            <stop offset="66%" stop-color="#985588"/>
+            <stop offset="74.5%" stop-color="#9c5281"/>
+            <stop offset="83%" stop-color="#9f4e7a"/>
+            <stop offset="91.5%" stop-color="#a24c73"/>
+            <stop offset="100%" stop-color="#a4496b"/>
+        </linearGradient>
+    </defs>
+    <path
+        fill="url(#Gradient)"
+        d="M0,128L30,154.7C60,181,120,235,180,218.7C240,203,300,117,360,106.7C420,96,480,160,540,197.3C600,235,660,245,720,224C780,203,840,149,900,149.3C960,149,1020,203,1080,208C1140,213,1200,171,1260,144C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"/>
+</svg>

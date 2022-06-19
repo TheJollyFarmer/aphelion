@@ -1,30 +1,55 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <NavBar/>
+  <WelcomeHero/>
+  <component
+    :is="section.component"
+    v-for="section in sectionComponents"
+    :key="section.data.name"
+    :section="section.data"/>
+  <FooterBar/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import sections from "@/data/sections";
+import FooterBar from "@/FooterBar";
+import NavBar from "@/components/nav/NavBar";
+import WelcomeHero from "@/components/WelcomeHero";
+import { defineAsyncComponent } from "vue";
+import { capitalise } from "@/utils/filters";
 
-nav {
-  padding: 30px;
+export default {
+  name: "App",
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  components: {
+    FooterBar,
+    NavBar,
+    WelcomeHero
+  },
 
-    &.router-link-exact-active {
-      color: #42b983;
+  data() {
+    return { sections };
+  },
+
+  computed: {
+    sectionComponents() {
+      return this.sections.map(section => this.createComponent(section));
+    }
+  },
+
+  methods: {
+    createComponent({ data }) {
+      return {
+        data,
+        component: defineAsyncComponent(() =>
+          import("@/components/sections/" + capitalise(data.name) + "Section")
+        )
+      };
     }
   }
-}
+};
+</script>
+
+<style lang="sass">
+#app
+  padding-top: 110px
 </style>

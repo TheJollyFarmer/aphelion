@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="eng">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,17 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <input type="text" name="subject"/>
+      <textarea name="message"></textarea>
+    </form>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVjRbd69-tVsqY-TMlmTxhKdUGvIeZ7nI"></script>
   </body>
 </html>

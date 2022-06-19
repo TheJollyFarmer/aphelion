@@ -1,0 +1,33 @@
+{
+  "about": {
+    "name": "Lewis Gell",
+    "role": "CEO Hand Wraps",
+    "text": "Working with Aphelion has been an experience for a lifetime."
+  },
+  "testimonials": [
+    {
+      "name": "Lewis Gell",
+      "role": "CEO Hand Wraps",
+      "text": "Working with Aphelion has been an experience for a lifetime.",
+      "image": "lewis"
+    },
+    {
+      "name": "Bob Mason",
+      "role": "Discus Exec",
+      "text": "Aphelion websites are a piece of art to be admired.",
+      "image": "bob"
+    },
+    {
+      "name": "Dawn Hope",
+      "role": "TFTacticians Client",
+      "text": "I have never found working with someone to be so uncomplicated.",
+      "image": "dawn"
+    },
+    {
+      "name": "Tim Sharpe",
+      "role": "CEO PFSolutions",
+      "text": "Aphelion brought my site in to the modern age. My visitor count has skyrocketed.",
+      "image": "tim"
+    }
+  ]
+}

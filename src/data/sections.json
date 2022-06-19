@@ -1,0 +1,44 @@
+[
+  {
+    "data": {
+      "name": "about",
+      "title": "We build solutions for your everyday problems",
+      "sub": "This is what we do in a nutshell"
+    }
+  },
+  {
+    "data": {
+      "name": "portfolio",
+      "title": "Recent works",
+      "sub": "Show and tell time"
+    }
+  },
+  {
+    "data": {
+      "name": "testimonials",
+      "title": "Some words from our clients",
+      "sub": "We do not like to brag, others do it for us"
+    }
+  },
+  {
+    "data": {
+      "name": "team",
+      "title": "The team",
+      "sub": "Meet the people that made it all happen"
+    }
+  },
+  {
+    "data": {
+      "name": "location",
+      "title": "Location",
+      "sub": "Where to find us"
+    }
+  },
+  {
+    "data": {
+      "name": "contact",
+      "title": "Contact us",
+      "sub": "And we'll reply in no time"
+    }
+  }
+]

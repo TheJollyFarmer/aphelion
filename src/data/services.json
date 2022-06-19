@@ -1,0 +1,14 @@
+[
+  {
+    "name": "design",
+    "description": "We are experienced in responsive web design and retina-ready websites using the well known WordPress CMS, Vue JS, and React frameworks."
+  },
+  {
+    "name": "development",
+    "description": "Want lightning fast apps with SEO ready functionality, utilising PHP Laravel or WordPress, or Python Django - look no further."
+  },
+  {
+    "name": "maintenance",
+    "description": "Need help maintaining a site? We have a vast area of expertise, making, maintaining a site relatively easy, regardless of preference. Including the capabilty to offer CMSs."
+  }
+]

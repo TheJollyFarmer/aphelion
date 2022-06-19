@@ -1,0 +1,57 @@
+$animation-timing: 20s
+$carousel-items: 4
+$animation-delay-fraction: $animation-timing / $carousel-items
+$animation-steps-fraction: 100 / $carousel-items
+$slide-change-timing: 3
+
+.carousel
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  position: relative
+  width: 600px
+  &:hover > .carousel-item
+    animation-play-state: paused
+  > .carousel-item
+    animation: vertical-carousel $animation-timing linear infinite
+    &:last-child
+      animation-delay: calc(-#{$animation-delay-fraction} * 2)
+
+@for $i from 1 through ($carousel-items - 1)
+  .carousel-item:nth-child(#{$i})
+    animation-delay: calc(#{$animation-delay-fraction} * #{$i - 2})
+
+@keyframes vertical-carousel
+  0%
+    transform: translateY(100%) scale(0.5)
+    opacity: 0
+    visibility: hidden
+
+  #{$slide-change-timing}%,
+  #{$animation-steps-fraction}%
+    transform: translateY(100%) scale(0.7)
+    opacity: .4
+    visibility: visible
+
+  #{$animation-steps-fraction + $slide-change-timing}%,
+  #{$animation-steps-fraction * 2}%
+    transform: translateY(0) scale(1)
+    opacity: 1
+    visibility: visible
+
+  #{($animation-steps-fraction * 2) + $slide-change-timing}%,
+  #{$animation-steps-fraction * 3}%
+    transform: translateY(-100%) scale(0.7)
+    opacity: .4
+    visibility: visible
+
+  #{($animation-steps-fraction * 3) + $slide-change-timing}%
+    transform: translateY(-100%) scale(0.5)
+    opacity: 0
+    visibility: visible
+
+  100%
+    transform: translateY(-100%) scale(0.5)
+    opacity: 0
+    visibility: hidden

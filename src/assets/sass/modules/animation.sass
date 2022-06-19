@@ -1,0 +1,35 @@
+$directions: left, right, up, down
+
+@function slide($direction, $distance)
+  $slide: (up: translateY($distance), right: translateX(-$distance), left: translateX($distance), down: translateY(-$distance))
+
+  @return map-get($slide, $direction)
+
+@mixin slide($direction, $distance: 0)
+  @keyframes slide-#{$direction}
+    0%
+      opacity: 0
+      transform: slide($direction, $distance)
+    100%
+      opacity: 1
+      transform: translate(0, 0)
+
+@each $direction in $directions
+  .animate-#{$direction}
+    animation: slide-#{$direction} $hover-in
+    will-change: opacity, transform
+    @include slide($direction, 25%)
+
+.animate-tile
+  animation: .4s cubic-bezier(.25, .25, .25, 1.25) fade-in
+  @for $i from 1 through 12
+    &:nth-child(#{$i})
+      animation-delay: $i * (0.02s)
+
+@keyframes fade-in
+  0%
+    opacity: 0
+    transform: translateX(50%) scale(0) rotateZ(-60deg)
+  100%
+    opacity: 1
+    transform: translateX(0) scale(1) rotateZ(0deg)
