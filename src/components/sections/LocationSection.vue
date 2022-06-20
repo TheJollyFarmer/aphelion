@@ -40,7 +40,7 @@ export default {
       new google.maps.Marker({
         position: { lat: 53.68721784080199, lng: -0.9959982078314452 },
         icon: {
-          url: require("@/assets/images/design.svg"),
+          url: require("@/assets/images/marker.svg"),
           scaledSize: new google.maps.Size(35, 35)
         },
         map: this.map
