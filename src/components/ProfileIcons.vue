@@ -8,6 +8,7 @@
       dimension="42"/>
   </div>
 </template>
+
 <script>
 import VImage from "@/components/util/VImage";
 

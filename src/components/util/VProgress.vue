@@ -16,7 +16,7 @@
 import Observer from "@/mixins/Observer";
 
 export default {
-  name: "SummonerStat",
+  name: "VProgress",
 
   mixins: [Observer],
 

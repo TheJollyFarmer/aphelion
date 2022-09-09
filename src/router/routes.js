@@ -15,6 +15,10 @@ const routes = [
     name: "home",
     component: App,
     meta: { sections }
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/"
   }
 ];
 
